@@ -5,6 +5,8 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=vijay711-github" alt="vijay711-github" /></a> </p>
 
+<img src="./assets/Banner.png" alt="Front End Developer Banner"/>
+
 - 🔭 I’m currently working on **Sass AI Platform**
 
 - 🌱 I’m currently learning **Next Js**
