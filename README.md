@@ -15,7 +15,7 @@
 
 - 📫 How to reach me **jadhavvijay7011@gmail.com**
 
-- 📄 Know about my experiences [https://drive.google.com/file/d/11uVxLRPirMVggM8H5pn6JuYiDiUH9V2R/view?usp=drive_link](https://drive.google.com/file/d/11uVxLRPirMVggM8H5pn6JuYiDiUH9V2R/view?usp=drive_link)
+- 📄 Know about my experiences [https://drive.google.com/file/d/11uVxLRPirMVggM8H5pn6JuYiDiUH9V2R/view?usp=drive_link](https://drive.google.com/file/d/1jlIyMMe7B9zqYWPQNUv9AreQo9PDwC2S/view)
 
 - ⚡ Fun fact **I love to learn new technology**
 
