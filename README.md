@@ -9,7 +9,7 @@
 
 - 🔭 I’m currently working on **Sass AI Platform**
 
-- 🌱 I’m currently learning **Next Js**
+- 🌱 I’m currently learning **Next Js &** **Backend**
 
 - 👨‍💻 All of my projects are available at [https://vijaydevportfolio.netlify.app/](https://vijaydevportfolio.netlify.app/)
 
