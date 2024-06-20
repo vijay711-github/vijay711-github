@@ -9,7 +9,7 @@
 
 - 🔭 I’m currently working on **Zapier end to end** **&** **AI Platform**
 
-- 🌱 I’m currently learning **Next Js &** **Backend & System Design**
+- 🌱 I’m currently learning **Next Js,** **Backend & System Design**
 
 - 👨‍💻 All of my projects are available at [https://vijaydevportfolio.netlify.app/](https://vijaydevportfolio.netlify.app/)
 
