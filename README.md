@@ -7,9 +7,9 @@
 
 <img src="./assets/Black Technology LinkedIn Banner.png" alt="Front End Developer Banner"/>
 
-- 🔭 I’m currently working on **Sass AI Platform**
+- 🔭 I’m currently working on **Zapier end to end** **&** **AI Platform**
 
-- 🌱 I’m currently learning **Next Js &** **Backend**
+- 🌱 I’m currently learning **Next Js &** **Backend & System Design**
 
 - 👨‍💻 All of my projects are available at [https://vijaydevportfolio.netlify.app/](https://vijaydevportfolio.netlify.app/)
 
