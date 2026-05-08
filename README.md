@@ -1,73 +1,85 @@
-# Hi 👋, I'm Vijay Jadhav
+<div align="center">
+  
+  <img src="./assets/Black Technology LinkedIn Banner.png" alt="Vijay Jadhav - Software Engineer" width="100%" />
 
-### A passionate Software Engineer from India 🇮🇳
+  <h1>Hi 👋, I'm Vijay Jadhav</h1>
+  
+  <h3>A Passionate Software Engineer & Full-Stack Developer from India 🇮🇳</h3>
 
-<p align="left">
-  <img src="https://komarev.com/ghpvc/?username=vijay711-github&label=Profile%20views&color=0e75b6&style=flat" alt="vijay711-github" />
+  <p>
+    <img src="https://komarev.com/ghpvc/?username=vijay711-github&label=Profile%20Views&color=0e75b6&style=for-the-badge" alt="Profile Views" />
+  </p>
+
+</div>
+
+---
+
+### 👨‍💻 About Me
+
+- 🔭 Currently building **AI Code Editor** & **Advanced RAG System**
+- 🌱 Deep diving into **AI Automation**, **System Design** & **Scalable Architectures**
+- 💬 Ask me anything about **React, Next.js, Node.js, TypeScript** or **Web Development**
+- 📫 Reach me: **[jadhavvijay7011@gmail.com](mailto:jadhavvijay7011@gmail.com)**
+- ⚡ Fun Fact: **AI is changing the game — and I'm learning to stay ahead of it!** 🚀
+
+---
+
+### 🛠️ Languages & Tools
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,bootstrap,html,css,sass&perline=8" height="45" alt="Frontend" />
 </p>
 
-<p align="left">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=vijay711-github" alt="vijay711-github" />
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django,graphql,go&perline=8" height="45" alt="Backend" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=aws,gcp,azure,docker,kubernetes,git,github&perline=8" height="45" alt="Cloud & DevOps" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,redis,cassandra&perline=8" height="45" alt="Databases" />
+</p>
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=figma,photoshop,xd,postman,cypress,jest&perline=8" height="45" alt="Tools" />
+</p>
+
+---
+
+### 📊 My Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=vijay711-github&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vijay711-github&theme=tokyonight&hide_border=true" alt="Streak Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs?username=vijay711-github&show_icons=true&theme=tokyonight&hide_border=true&layout=compact" alt="Top Languages" />
+</p>
+
+---
+
+### 📫 Connect With Me
+
+<p align="center">
+  <a href="https://github.com/vijay711-github" target="_blank">
+    <img src="https://skillicons.dev/icons?i=github" height="45" alt="GitHub" />
   </a>
 </p>
 
 ---
 
-- 🔭 I'm currently working on **AI Code Editor & RAG System**
-- 🌱 I'm currently learning **AI Automation & System Design**
-- 💬 Ask me about **React, Node.js, JavaScript, Web Development**
-- 📫 How to reach me: **jadhavvijay7011@gmail.com**
-- ⚡ Fun fact: **AI will take Software Engineer jobs!** 😅
-- 👨‍💻 All of my projects are available at **[My Portfolio](https://vijaydevportfolio.vercel.app/)**
-- 📝 I regularly write articles on **[My Blog](https://vijaydevportfolio.netlify.app/)**
-- 📄 Know about my experiences **[Resume](https://drive.google.com/file/d/11uVxLRPirMVggM8H5pn6JuYiDiUH9V2R/view?usp=drive_link)**
+### 🌐 Explore More
+
+- **Portfolio** → [vijaydevportfolio.vercel.app](https://vijaydevportfolio.vercel.app/)
+- **Blog** → [vijaydevportfolio.netlify.app](https://vijaydevportfolio.netlify.app/)
+- **Resume** → [View Resume](https://drive.google.com/file/d/11uVxLRPirMVggM8H5pn6JuYiDiUH9V2R/view?usp=drive_link)
 
 ---
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-  <a href="https://github.com/vijay711-github" target="blank">
-    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="vijay711-github" height="30" width="40" />
-  </a>
-</p>
-
----
-
-<h3 align="left">Languages and Tools:</h3>
-
-<p align="left">
-  <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
-    <img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,bootstrap,html,css,sass" height="40" alt="frontend" />
-  </a>
-</p>
-
-<p align="left">
-  <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,django,graphql,go" height="40" alt="backend" />
-  </a>
-</p>
-
-<p align="left">
-  <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
-    <img src="https://skillicons.dev/icons?i=aws,gcp,azure,docker,kubernetes,git,github" height="40" alt="cloud & devops" />
-  </a>
-</p>
-
-<p align="left">
-  <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
-    <img src="https://skillicons.dev/icons?i=mongodb,postgres,mysql,redis,cassandra" height="40" alt="databases" />
-  </a>
-</p>
-
-<p align="left">
-  <a href="https://skillicons.dev" target="_blank" rel="noreferrer">
-    <img src="https://skillicons.dev/icons?i=figma,photoshop,xd,postman,cypress,jest" height="40" alt="tools" />
-  </a>
-</p>
-
----
-
-
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=vijay711-github" alt="vijay711-github" /></p>
+*Made with ❤️ and lots of ☕*
