@@ -30,5 +30,13 @@ data = {
     "total": total,
     "best_day": best,
 }
+
+output_dir = Path("data")
+output_dir.mkdir(parents=True, exist_ok=True)
+
+(output_dir / "contributions.json").write_text(
+    json.dumps(data, indent=2),
+    encoding="utf-8"
+)
 Path("data/contributions.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
 print(f"Saved {len(days)} days, {total} contributions.")
