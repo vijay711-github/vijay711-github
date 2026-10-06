@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="720" viewBox="0 0 520 720">
+<rect width="520" height="720" rx="16" fill="#0d1117" stroke="#30363d"/>
+<circle cx="26" cy="28" r="7" fill="#ff5f56"/><circle cx="50" cy="28" r="7" fill="#ffbd2e"/><circle cx="74" cy="28" r="7" fill="#27c93f"/>
+<text x="100" y="35" fill="#8b949e" font-family="monospace" font-size="16">vijay@github: ~</text>
+<g font-family="monospace" font-size="18">
+<text x="28" y="82" fill="#58a6ff">vijay@github</text><text x="145" y="82" fill="#8b949e">────────────────────</text>
+<text x="28" y="122" fill="#79c0ff">Role</text><text x="145" y="122" fill="#e6edf3">Full Stack Developer</text>
+<text x="28" y="158" fill="#79c0ff">Focus</text><text x="145" y="158" fill="#e6edf3">Web Apps &amp; SaaS</text>
+<text x="28" y="194" fill="#79c0ff">Frontend</text><text x="145" y="194" fill="#e6edf3">React • Next.js • Vue</text>
+<text x="28" y="230" fill="#79c0ff">Backend</text><text x="145" y="230" fill="#e6edf3">Node.js • Express</text>
+<text x="28" y="266" fill="#79c0ff">Database</text><text x="145" y="266" fill="#e6edf3">PostgreSQL • MySQL</text>
+<text x="28" y="302" fill="#79c0ff">ORM</text><text x="145" y="302" fill="#e6edf3">Prisma • Sequelize</text>
+<text x="28" y="338" fill="#79c0ff">Cloud/Tools</text><text x="145" y="338" fill="#e6edf3">Firebase • Docker • Git</text>
+<text x="28" y="374" fill="#79c0ff">Styling</text><text x="145" y="374" fill="#e6edf3">Tailwind • Vuetify</text>
+<text x="28" y="410" fill="#79c0ff">Learning</text><text x="145" y="410" fill="#e6edf3">DSA • System Design • AI</text>
+<text x="28" y="464" fill="#7ee787">$</text><text x="52" y="464" fill="#e6edf3">git status</text>
+<text x="52" y="498" fill="#8b949e">● building production features</text>
+<text x="52" y="532" fill="#8b949e">● improving architecture</text>
+<text x="52" y="566" fill="#8b949e">● learning every day</text>
+<text x="28" y="630" fill="#7ee787">$</text><text x="52" y="630" fill="#e6edf3">echo "Let's build something great."</text>
+</g>
+</svg>
