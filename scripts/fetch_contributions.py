@@ -7,10 +7,10 @@ from bs4 import BeautifulSoup
 
 USERNAME = "vijay711-github"
 
-URL = f"https://github.com/users/{USERNAME}/contributions"
+url = f"https://github.com/users/{USERNAME}/contributions"
 
 response = requests.get(
-    URL,
+    url,
     timeout=30,
     headers={
         "User-Agent": "Mozilla/5.0"
@@ -19,49 +19,95 @@ response = requests.get(
 
 response.raise_for_status()
 
-soup = BeautifulSoup(response.text, "html.parser")
+html = response.text
+soup = BeautifulSoup(html, "html.parser")
 
 days = []
 
+# GitHub contribution cells
 for cell in soup.select("td.ContributionCalendar-day"):
 
     date = cell.get("data-date")
 
-    # GitHub may not expose data-count anymore.
-    # Read the number from aria-label instead.
-    aria_label = cell.get("aria-label", "")
+    # GitHub can expose the contribution number in
+    # aria-label, data-count, or title depending on the page version.
+    text = " ".join(cell.stripped_strings)
 
-    count = 0
+    aria = cell.get("aria-label", "")
+    data_count = cell.get("data-count", "")
 
-    match = re.search(r"([\d,]+)\s+contributions?", aria_label)
+    combined = f"{aria} {text} {data_count}"
+
+    match = re.search(
+        r"([\d,]+)\s+contributions?",
+        combined,
+        re.IGNORECASE
+    )
 
     if match:
         count = int(match.group(1).replace(",", ""))
+    else:
+        count = 0
 
-    # Keep data-level if available.
-    level = cell.get("data-level")
+    level = cell.get("data-level", "0")
 
-    if level is None:
+    try:
+        level = int(level)
+    except ValueError:
         level = 0
 
     days.append({
         "date": date,
         "count": count,
-        "level": int(level)
+        "level": level
     })
 
 
-# Last 365/371 days
+# ---------------------------------------------------------
+# Get the total directly from GitHub's contribution heading
+# ---------------------------------------------------------
+
+total = None
+
+patterns = [
+    r"([\d,]+)\s+contributions?\s+in\s+the\s+last\s+year",
+    r"([\d,]+)\s+contributions?\s+in\s+the\s+last\s+year",
+]
+
+for pattern in patterns:
+
+    match = re.search(
+        pattern,
+        html,
+        re.IGNORECASE
+    )
+
+    if match:
+        total = int(
+            match.group(1).replace(",", "")
+        )
+        break
+
+
+# If GitHub doesn't expose the heading, calculate it.
+if total is None:
+    total = sum(
+        day["count"]
+        for day in days
+    )
+
+
+# Keep the latest year of cells
 days = days[-371:]
 
-total = sum(day["count"] for day in days)
 
 best_day = max(
     days,
     key=lambda day: day["count"],
     default={
+        "date": "",
         "count": 0,
-        "date": ""
+        "level": 0
     }
 )
 
@@ -74,7 +120,7 @@ data = {
 }
 
 
-# Make sure the data directory exists
+# Make sure data directory exists
 output_dir = Path("data")
 output_dir.mkdir(
     parents=True,
@@ -82,15 +128,22 @@ output_dir.mkdir(
 )
 
 
-(output_dir / "contributions.json").write_text(
+output_file = output_dir / "contributions.json"
+
+output_file.write_text(
     json.dumps(data, indent=2),
     encoding="utf-8"
 )
 
 
-print(f"Saved {len(days)} days.")
+print("=" * 50)
+print("GitHub Contribution Fetch")
+print("=" * 50)
+print(f"Username: {USERNAME}")
+print(f"Days found: {len(days)}")
 print(f"Total contributions: {total}")
 print(
     f"Best day: {best_day['date']} "
     f"({best_day['count']} contributions)"
 )
+print("=" * 50)
