@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="190" viewBox="0 0 900 190">
 <rect width="900" height="190" rx="16" fill="#0d1117" stroke="#30363d"/>
-<text x="30" y="34" fill="#8b949e" font-family="monospace" font-size="15">579 contributions in the last year</text>
+<text x="30" y="34" fill="#8b949e" font-family="monospace" font-size="15">580 contributions in the last year</text>
 <rect x="30" y="55" width="10" height="10" rx="2" fill="#161b22"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.000s" fill="freeze"/></rect>
 <rect x="30" y="69" width="10" height="10" rx="2" fill="#161b22"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.008s" fill="freeze"/></rect>
 <rect x="30" y="83" width="10" height="10" rx="2" fill="#161b22"><animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="0.016s" fill="freeze"/></rect>
