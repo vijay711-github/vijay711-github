@@ -42,5 +42,9 @@ Building web products and practical AI-powered workflows — from UI and APIs to
 </div>
 
 <img src="./assets/section-activity.svg" width="100%" alt="GitHub activity"/>
-<div align="center"><img src="./assets/contrib-heatmap.svg" width="100%" alt="Animated GitHub contribution activity"/></div>
-<img src="./assets/footer.svg" width="100%" alt="Build Learn Ship Repeat"/>
+<div align="center"><img src="./assets/contrib-heatmap.svg" width="100%" alt="GitHub contribution activity based on fetched contribution data"/></div>
+<div align="center">
+
+**Build. Learn. Ship. Improve.**
+
+</div>
