@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="92" viewBox="0 0 1000 92">
+<rect x="1" y="1" width="998" height="90" rx="16" fill="#0b1220" stroke="#263449"/>
+<rect x="20" y="22" width="4" height="48" rx="2" fill="#c084fc"/>
+<text x="42" y="43" font-family="monospace" font-size="13" letter-spacing="3" fill="#c084fc">04 / GENERATIVE AI ENGINEERING</text>
+<text x="42" y="69" font-family="Arial,sans-serif" font-size="25" font-weight="700" fill="#f8fafc">Useful AI. Reliable software.</text>
+<path d="M710 46 h42 l12 -15 l16 30 l16 -30 l15 15 h125" fill="none" stroke="#c084fc" stroke-opacity=".8" stroke-width="2"/>
+<circle cx="710" cy="46" r="4" fill="#22d3ee"><animate attributeName="cx" values="710;925;710" dur="5s" repeatCount="indefinite"/></circle>
+</svg>
