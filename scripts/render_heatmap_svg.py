@@ -1,21 +1,45 @@
 import json
 from pathlib import Path
 
-data=json.loads(Path("data/contributions.json").read_text(encoding="utf-8"))
-days=data.get("days",[])[-371:]
-days=[{"count":0,"level":0} for _ in range(371-len(days))]+days
-pal=["#172033","#12352c","#12614b","#16a36a","#4ade80"]
-total=data.get("total",0)
-out=[
-'<svg xmlns="http://www.w3.org/2000/svg" width="900" height="190" viewBox="0 0 900 190">',
-'<rect width="900" height="190" rx="18" fill="#0b1220" stroke="#263244"/>',
-f'<text x="30" y="35" fill="#dbeafe" font-family="ui-monospace,monospace" font-size="16" font-weight="700">GitHub activity · {total:,} contributions</text>',
-'<text x="30" y="58" fill="#64748b" font-family="ui-monospace,monospace" font-size="12">Updated automatically from GitHub</text>']
-for i,d in enumerate(days):
-    col,row=divmod(i,7)
-    x,y=30+col*14,78+row*14
-    level=max(0,min(4,int(d.get("level",0))))
-    delay=col*.02+row*.006
-    out.append(f'<rect x="{x}" y="{y}" width="10" height="10" rx="3" fill="{pal[level]}"><animate attributeName="opacity" from="0" to="1" dur=".35s" begin="{delay:.3f}s" fill="freeze"/></rect>')
-out += ['<text x="30" y="178" fill="#64748b" font-family="ui-monospace,monospace" font-size="11">Less</text>','<text x="825" y="178" fill="#64748b" font-family="ui-monospace,monospace" font-size="11">More</text>','</svg>']
-Path("assets/contrib-heatmap.svg").write_text("\n".join(out),encoding="utf-8")
+data_path = Path("data/contributions.json")
+if not data_path.exists():
+    raise SystemExit("Missing data/contributions.json. Run scripts/fetch_contributions.py first.")
+
+data = json.loads(data_path.read_text(encoding="utf-8"))
+days = data.get("days", [])[-371:]
+if not days:
+    raise SystemExit("No contribution days found in data/contributions.json; check the fetch script output.")
+
+days = [{"count": 0, "level": 0}] * (371 - len(days)) + days
+counts = [int(d.get("count", 0) or 0) for d in days]
+max_count = max(counts) if counts else 0
+palette = ["#172033", "#14532d", "#15803d", "#16a34a", "#4ade80"]
+total = data.get("total", sum(counts))
+
+parts = [
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="190" viewBox="0 0 1000 190">',
+    '<rect width="1000" height="190" rx="18" fill="#0b1220" stroke="#263449"/>',
+    f'<text x="28" y="35" font-family="monospace" font-size="15" fill="#a7f3d0">GITHUB CONTRIBUTION ACTIVITY · {int(total):,} CONTRIBUTIONS</text>',
+    '<text x="28" y="57" font-family="monospace" font-size="12" fill="#94a3b8">Fetched from GitHub contribution data · refreshed by Actions</text>',
+]
+for i, day in enumerate(days):
+    col, row = divmod(i, 7)
+    x, y = 28 + col * 17, 75 + row * 13
+    count = int(day.get("count", 0) or 0)
+    if count <= 0 or max_count <= 0:
+        level = 0
+    elif count / max_count <= .25:
+        level = 1
+    elif count / max_count <= .5:
+        level = 2
+    elif count / max_count <= .75:
+        level = 3
+    else:
+        level = 4
+    parts.append(f'<rect x="{x}" y="{y}" width="11" height="9" rx="2" fill="{palette[level]}" stroke="#263449" stroke-width=".35"><title>{count} contributions</title></rect>')
+parts.extend([
+    '<text x="28" y="174" font-family="monospace" font-size="11" fill="#64748b">LESS</text>',
+    '<text x="925" y="174" font-family="monospace" font-size="11" fill="#64748b">MORE</text>',
+    '</svg>'
+])
+Path("assets/contrib-heatmap.svg").write_text("\\n".join(parts), encoding="utf-8")
