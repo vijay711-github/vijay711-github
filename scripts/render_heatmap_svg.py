@@ -1,34 +1,21 @@
 import json
 from pathlib import Path
 
-data = json.loads(Path("data/contributions.json").read_text(encoding="utf-8"))
-days = data.get("days", [])
-palette = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
-
-# Normalize to 53 weeks x 7 days. Pad at the beginning.
-days = days[-371:]
-days = [{"date": "", "count": 0, "level": 0}] * (371-len(days)) + days
-
-w, h = 900, 190
-parts = [
-    f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">',
-    '<rect width="900" height="190" rx="16" fill="#0d1117" stroke="#30363d"/>',
-    f'<text x="30" y="34" fill="#8b949e" font-family="monospace" font-size="15">{data.get("total",0):,} contributions in the last year</text>'
-]
-for i, d in enumerate(days):
-    col, row = divmod(i, 7)
-    x, y = 30 + col*14, 55 + row*14
-    level = max(0, min(4, int(d.get("level",0))))
-    delay = (col * 0.025 + row * 0.008)
-    parts.append(
-        f'<rect x="{x}" y="{y}" width="10" height="10" rx="2" fill="{palette[level]}">'
-        f'<animate attributeName="opacity" from="0" to="1" dur="0.45s" begin="{delay:.3f}s" fill="freeze"/></rect>'
-    )
-parts += [
-    '<text x="30" y="170" fill="#8b949e" font-family="monospace" font-size="13">Less</text>',
-    '<text x="650" y="170" fill="#8b949e" font-family="monospace" font-size="13">More</text>',
-]
-for i, color in enumerate(palette):
-    parts.append(f'<rect x="{70+i*16}" y="160" width="10" height="10" rx="2" fill="{color}"/>')
-parts.append("</svg>")
-Path("profile/contrib-heatmap.svg").write_text("\n".join(parts), encoding="utf-8")
+data=json.loads(Path("data/contributions.json").read_text(encoding="utf-8"))
+days=data.get("days",[])[-371:]
+days=[{"count":0,"level":0} for _ in range(371-len(days))]+days
+pal=["#172033","#12352c","#12614b","#16a36a","#4ade80"]
+total=data.get("total",0)
+out=[
+'<svg xmlns="http://www.w3.org/2000/svg" width="900" height="190" viewBox="0 0 900 190">',
+'<rect width="900" height="190" rx="18" fill="#0b1220" stroke="#263244"/>',
+f'<text x="30" y="35" fill="#dbeafe" font-family="ui-monospace,monospace" font-size="16" font-weight="700">GitHub activity · {total:,} contributions</text>',
+'<text x="30" y="58" fill="#64748b" font-family="ui-monospace,monospace" font-size="12">Updated automatically from GitHub</text>']
+for i,d in enumerate(days):
+    col,row=divmod(i,7)
+    x,y=30+col*14,78+row*14
+    level=max(0,min(4,int(d.get("level",0))))
+    delay=col*.02+row*.006
+    out.append(f'<rect x="{x}" y="{y}" width="10" height="10" rx="3" fill="{pal[level]}"><animate attributeName="opacity" from="0" to="1" dur=".35s" begin="{delay:.3f}s" fill="freeze"/></rect>')
+out += ['<text x="30" y="178" fill="#64748b" font-family="ui-monospace,monospace" font-size="11">Less</text>','<text x="825" y="178" fill="#64748b" font-family="ui-monospace,monospace" font-size="11">More</text>','</svg>']
+Path("assets/contrib-heatmap.svg").write_text("\n".join(out),encoding="utf-8")
