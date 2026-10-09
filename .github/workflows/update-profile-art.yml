@@ -1,5 +1,5 @@
-name: Update profile art
 
+name: Update profile art
 
 on:
   schedule:
@@ -11,6 +11,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: profile-art-update
+  cancel-in-progress: false
 
 jobs:
   heatmap:
@@ -34,8 +38,14 @@ jobs:
       - name: Render heatmap
         run: python scripts/render_heatmap_svg.py
 
+      - name: Verify generated files
+        run: |
+          test -s data/contributions.json
+          test -s assets/contrib-heatmap.svg
+          echo "Contribution data and SVG exist."
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph [skip ci]"
-          file_pattern: "data/contributions.json profile/contrib-heatmap.svg"
+          file_pattern: "data/contributions.json assets/contrib-heatmap.svg"
