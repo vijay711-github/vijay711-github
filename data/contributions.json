@@ -1850,9 +1850,14 @@
       "date": "2026-10-03",
       "count": 0,
       "level": 0
+    },
+    {
+      "date": "2026-10-10",
+      "count": 0,
+      "level": 1
     }
   ],
-  "total": 596,
+  "total": 599,
   "best_day": {
     "date": "2025-10-05",
     "count": 0,
