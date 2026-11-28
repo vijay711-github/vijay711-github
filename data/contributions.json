@@ -1850,9 +1850,14 @@
       "date": "2026-11-21",
       "count": 0,
       "level": 1
+    },
+    {
+      "date": "2026-11-28",
+      "count": 0,
+      "level": 0
     }
   ],
-  "total": 620,
+  "total": 621,
   "best_day": {
     "date": "2025-11-23",
     "count": 0,
